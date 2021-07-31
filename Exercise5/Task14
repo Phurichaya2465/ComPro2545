@@ -1,0 +1,14 @@
+information_str = input("Enter your text : ")
+dic_str = {"Upper_case": 0, "Lower_case": 0, "Special_case": 0}
+for i in information_str:
+    if not i.isupper() and not i.islower():
+        dic_str["Upper_case"] += 1
+    elif i.isupper():
+        dic_str["Lower_case"] += 1
+    elif i.islower():
+        dic_str["Special_case"] += 1
+
+print("Enter your text: ", information_str)
+print("Uppercase character number : ", dic_str["Upper_case"])
+print("Lowercase character number : ", dic_str["Lower_case"])
+print("Special character number : ", dic_str["Special_case"])
