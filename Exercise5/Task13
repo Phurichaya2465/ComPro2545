@@ -1,0 +1,29 @@
+username_list = ['admin']
+password_list = ['1234']
+
+while True:
+
+    username = input("Enter Username : ")
+    password = int(input("Enter Password : "))
+
+    if username in username_list and password in password_list:
+        question = input("Want to create a new user and password? if You want press 'y', if not press 'n' ")
+        if question == 'y':
+            username_list.clear()
+            password_list.clear()
+            username_new = input("Enter your New Username : ")
+            password_new = int(input("Enter your New Password : "))
+            username_list.append(username_new)
+            password_list.append(password_new)
+            break
+        if question == 'n':
+            break
+
+    elif username not in username_list:
+        print("Your username is wrong")
+    elif password not in password_list:
+        print("Your password is wrong")
+
+print("Your new username ", str(username_list))
+print("Your new password  ", str(password_list))
+print("Congratulations !!!")
